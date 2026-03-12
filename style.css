@@ -15,16 +15,16 @@ h2 {
 
 @font-face {
     font-family: 'UraBumBumSP';
-    src: url('fonts/UraBumBumSP.otf') format('opentype');
+    src: url('UraBumBumSP.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     font-display: swap; /* для быстрой загрузки */
 }
 @font-face {
     font-family: 'Ramona';
-    src: url('fonts/Ramona-Regular.woff2') format('woff2'),
-         url('fonts/Ramona-Regular.woff') format('woff'),
-         url('fonts/Ramona-Light.ttf') format('truetype');
+    src: url('Ramona-Regular.woff2') format('woff2'),
+         url('Ramona-Regular.woff') format('woff'),
+         url('Ramona-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap; /* для быстрой загрузки */
@@ -32,25 +32,25 @@ h2 {
 
 @font-face {
     font-family: 'Ramona';
-    src: url('fonts/Ramona-Bold.woff2') format('woff2'),
-         url('fonts/Ramona-Bold.woff') format('woff'),
-         url('fonts/Ramona-Bold.ttf') format('truetype');
+    src: url('Ramona-Bold.woff2') format('woff2'),
+         url('Ramona-Bold.woff') format('woff'),
+         url('Ramona-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url('fonts/Ramona-Bold.woff2') format('woff2'),
-         url('fonts/Ramona-Bold.woff') format('woff'),
-         url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+    src: url('Ramona-Bold.woff2') format('woff2'),
+         url('Ramona-Bold.woff') format('woff'),
+         url('Montserrat-SemiBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Adventure';
-    src: url('fonts/ofont.ru_Adventure.ttf') format('truetype');
+    src: url('ofont.ru_Adventure.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -401,5 +401,6 @@ footer { background: var(--blue); color: var(--white); text-align: center; paddi
         font-size: 3.5rem;
     }
 }
+
 
 /* Большие десктопы (от 1201px) — все стандартные стили работают */
