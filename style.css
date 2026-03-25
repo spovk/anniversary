@@ -581,6 +581,7 @@ footer { background: var(--blue); color: var(--white); text-align: center; paddi
     
     .register-text {
         padding: 0 15px 25px 15px;
+        margin-top: -60px;
     }
     
     .register-text h2 {
