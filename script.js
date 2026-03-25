@@ -44,34 +44,4 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.animate-up, .animate-left, .animate-right').forEach(el => observer.observe(el));
 
-// Отправка формы и нумерация заявок
-let requestCount = localStorage.getItem('req_count') || 0;
 
-document.getElementById('tg-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const group = document.getElementById('group').value;
-    const status = document.getElementById('status-msg');
-    
-    requestCount++;
-    localStorage.setItem('req_count', requestCount);
-
-    const message = `🔥 Новая заявка №${requestCount}\n👤 ФИО: ${name}\n👤 Отряд: ${group}\n📅 Дата: ${new Date().toLocaleString()}`;
-
-    try {
-        const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ chat_id: CHAT_ID, text: message })
-        });
-
-        if (response.ok) {
-            status.innerHTML = `<p style="color: green; margin-top:10px;">Заявка отправлена! Ждем вас!</p>`;
-            this.reset();
-        } else {
-            throw new Error();
-        }
-    } catch {
-        status.innerHTML = `<p style="color: red; margin-top:10px;">Ошибка. Проверьте соединение.</p>`;
-    }
-});
