@@ -404,3 +404,197 @@ footer { background: var(--blue); color: var(--white); text-align: center; paddi
 
 
 /* Большие десктопы (от 1201px) — все стандартные стили работают */
+/* ===== НОВЫЙ БЛОК С ФОТОГРАФИЕЙ И КНОПКОЙ ===== */
+.register-photo-section {
+    padding: 60px 0;
+}
+
+.photo-card {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: var(--white);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.photo-frame {
+    flex: 1;
+    overflow: hidden;
+    min-height: 320px;
+}
+
+.register-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.photo-card:hover .register-photo {
+    transform: scale(1.03);
+}
+
+.register-text {
+    flex: 1;
+    padding: 40px 50px 40px 0;
+    text-align: left;
+}
+
+.register-text h2 {
+    font-size: 2.2rem;
+    color: var(--blue);
+    margin-bottom: 20px;
+    font-family: 'Ramona', 'Montserrat', sans-serif;
+}
+
+.register-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.register-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(235, 104, 35, 0.3);
+}
+
+.register-btn:hover {
+    background: #c5531a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(235, 104, 35, 0.4);
+}
+
+/* ===== АДАПТИВ ДЛЯ НОУТБУКА (до 1200px) ===== */
+@media (max-width: 1200px) {
+    .register-text {
+        padding: 35px 40px 35px 0;
+    }
+    
+    .register-text h2 {
+        font-size: 1.9rem;
+    }
+    
+    .register-text p {
+        font-size: 1rem;
+    }
+}
+
+/* ===== АДАПТИВ ДЛЯ ПЛАНШЕТА (до 992px) ===== */
+@media (max-width: 992px) {
+    .photo-card {
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 24px;
+    }
+    
+    .photo-frame {
+        width: 100%;
+        max-height: 380px;
+    }
+    
+    .register-photo {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .register-text {
+        padding: 0 30px 40px 30px;
+        text-align: center;
+    }
+    
+    .register-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .register-text p {
+        font-size: 1rem;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ===== АДАПТИВ ДЛЯ ТЕЛЕФОНА (до 768px) ===== */
+@media (max-width: 768px) {
+    .register-photo-section {
+        padding: 40px 0;
+    }
+    
+    .photo-card {
+        border-radius: 20px;
+        margin: 0 15px;
+    }
+    
+    .photo-frame {
+        max-height: 280px;
+    }
+    
+    .register-text {
+        padding: 0 20px 30px 20px;
+    }
+    
+    .register-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+    
+    .register-text p {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+        padding: 0 5px;
+    }
+    
+    .register-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* ===== АДАПТИВ ДЛЯ МАЛЕНЬКИХ ТЕЛЕФОНОВ (до 480px) ===== */
+@media (max-width: 480px) {
+    .register-photo-section {
+        padding: 30px 0;
+    }
+    
+    .photo-frame {
+        max-height: 220px;
+    }
+    
+    .register-text {
+        padding: 0 15px 25px 15px;
+    }
+    
+    .register-text h2 {
+        font-size: 1.3rem;
+    }
+    
+    .register-text p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .register-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
