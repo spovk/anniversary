@@ -1,6 +1,6 @@
 // Конфигурация Telegram
-const BOT_TOKEN = '8519549694:AAGhGgAYokzS026hk3QqIzSfw13QBRCd3SQ';
-const CHAT_ID = '995263774';
+const BOT_TOKEN = '8639063135:AAFHQL-NngOyorKpQZR6y--zTa1BEbPKsDg';
+const CHAT_ID = '8639063135';
 
 // Бургер меню
 const burger = document.querySelector('.burger');
